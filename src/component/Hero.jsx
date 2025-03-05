@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="container  w-[90%] mx-auto flex flex-col lg:flex-row items-center gap-10 justify-center">
         
         {/* Left Content */}
-        <div className="lg:w-1/2 text-center lg:text-left">
+        <div className="lg:w-1/2 text-center lg:text-left"  data-aos="fade-right">
           <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
             Caring For The <br /> Speechless Since 1992
           </h1>
@@ -19,7 +19,7 @@ const Hero = () => {
         </div>
 
         {/* Right Images */}
-        <div className="lg:w-1/2 flex justify-center lg:justify-center mt-8 lg:mt-0">
+        <div className="lg:w-1/2 flex justify-center lg:justify-center mt-8 lg:mt-0"  data-aos="fade-left">
           <div className="flex space-x-4">
             <img src="/images/bottle.png" alt="Product 1" className="h-60  lg:h-120 drop-shadow-lg" />
             <img src="/images/bottle.png" alt="Product 2" className="h-80  lg:h-140 drop-shadow-lg" />
