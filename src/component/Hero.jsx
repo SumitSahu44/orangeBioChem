@@ -2,8 +2,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="bg-[#F4941E] border h-[140vh] md:h-[89vh] text-white py-16 px-8">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center  justify-center">
+    <section className="bg-[#F4941E] border h-[140vh] md:h-[120vh] lg:h-[92vh] text-white  py-20 px-8">
+      <div className="container  w-[90%] mx-auto flex flex-col lg:flex-row items-center gap-10 justify-center">
         
         {/* Left Content */}
         <div className="lg:w-1/2 text-center lg:text-left">
