@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { Menu, X } from "lucide-react"; // Import icons for mobile menu
 
 const Navbar = () => {
@@ -11,13 +12,15 @@ const Navbar = () => {
         
         {/* Logo */}
         <div>
-          <img src="/images/orangebio.png" alt="Orange Biochem" className="h-12 w-auto" />
+          <Link to="/">
+            <img src="/images/orangebio.png" alt="Orange Biochem" className="h-12 w-auto" />
+          </Link>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-6 text-lg font-medium">
-          <NavItem title="Home" isActive />
-          <NavItem title="About" />
+          <NavItem title="Home" link="/" isActive />
+          <NavItem title="About" link="/about" />
 
           {/* Products Dropdown */}
           <li
@@ -28,24 +31,28 @@ const Navbar = () => {
             Products
             {dropdownOpen && (
               <ul className="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-md">
-                {["Category 1", "Category 2", "Category 3"].map((category) => (
-                  <li key={category} className="px-4 py-2 hover:bg-gray-100">
-                    {category}
+                {["Category 1", "Category 2", "Category 3"].map((category, index) => (
+                  <li key={index} className="px-4 py-2 hover:bg-gray-100">
+                    <Link to={`/products/${category.toLowerCase().replace(/\s+/g, "-")}`}>
+                      {category}
+                    </Link>
                   </li>
                 ))}
               </ul>
             )}
           </li>
 
-          <NavItem title="Gallery" />
-          <NavItem title="Contact" />
-          <NavItem title="Blogs" />
+          <NavItem title="Gallery" link="/gallery" />
+          <NavItem title="Contact" link="/contact" />
+          <NavItem title="Blogs" link="/blogs" />
         </ul>
 
         {/* Order Now Button (Hidden on Small Screens) */}
-        <button className="hidden md:block bg-[#F4941E] text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition">
-          Order Now
-        </button>
+        <Link to="/order">
+          <button className="hidden md:block bg-[#F4941E] text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition">
+            Order Now
+          </button>
+        </Link>
 
         {/* Mobile Menu Icon */}
         <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
@@ -56,22 +63,24 @@ const Navbar = () => {
       {/* Mobile Menu (Sliding) */}
       {menuOpen && (
         <ul className="md:hidden bg-white text-lg font-medium py-4 px-6 border-t">
-          <NavItem title="Home" isMobile />
-          <NavItem title="About" isMobile />
-          <NavItem title="Products" isMobile isDropdown />
-          <NavItem title="Gallery" isMobile />
-          <NavItem title="Contact" isMobile />
-          <NavItem title="Blogs" isMobile />
-          <button className="mt-4 w-full bg-[#F4941E] text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition">
-            Order Now
-          </button>
+          <NavItem title="Home" link="/" isMobile />
+          <NavItem title="About" link="/about" isMobile />
+          <NavItem title="Products" isDropdown />
+          <NavItem title="Gallery" link="/gallery" isMobile />
+          <NavItem title="Contact" link="/contact" isMobile />
+          <NavItem title="Blogs" link="/blogs" isMobile />
+          <Link to="/order">
+            <button className="mt-4 w-full bg-[#F4941E] text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition">
+              Order Now
+            </button>
+          </Link>
         </ul>
       )}
     </nav>
   );
 };
 
-const NavItem = ({ title, isActive, isMobile, isDropdown }) => {
+const NavItem = ({ title, link, isActive, isMobile, isDropdown }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return isDropdown ? (
@@ -82,9 +91,11 @@ const NavItem = ({ title, isActive, isMobile, isDropdown }) => {
       Products
       {dropdownOpen && (
         <ul className="mt-2 w-full bg-white shadow-md rounded-md">
-          {["Category 1", "Category 2", "Category 3"].map((category) => (
-            <li key={category} className="px-4 py-2 hover:bg-gray-100">
-              {category}
+          {["Category 1", "Category 2", "Category 3"].map((category, index) => (
+            <li key={index} className="px-4 py-2 hover:bg-gray-100">
+              <Link to={`/products/${category.toLowerCase().replace(/\s+/g, "-")}`}>
+                {category}
+              </Link>
             </li>
           ))}
         </ul>
@@ -92,7 +103,7 @@ const NavItem = ({ title, isActive, isMobile, isDropdown }) => {
     </li>
   ) : (
     <li className={`cursor-pointer hover:text-gray-600 ${isActive ? "font-bold" : ""} ${isMobile ? "py-2 border-b" : ""}`}>
-      {title}
+      <Link to={link}>{title}</Link>
     </li>
   );
 };

@@ -1,21 +1,25 @@
-import React from 'react'
-import Navbar from './component/Navbar'
-import Hero from './component/Hero'
-import Services from './component/Services'
-import Products from './component/Products'
-import Work from './component/Works'
-import TestimonialCarousel from './component/TestimonialCarousel'
+import React from "react";
+import { Routes, Route } from "react-router-dom"; // Added necessary imports
+
+import Navbar from "./component/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import SingleProduct from "./pages/SingleProduct";
+
 const App = () => {
   return (
     <div>
-      <Navbar/>
-      <Hero />
-      <Services/>
-      <Products/>
-      <Work/>
-      <TestimonialCarousel/>
-    </div>
-  )
-}
+      <Navbar />
 
-export default App
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<SingleProduct />} /> 
+      </Routes>
+    </div>
+  );
+};
+
+export default App;
