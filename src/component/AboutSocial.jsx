@@ -36,14 +36,14 @@ const AboutSocial = () => {
   ];
 
   return (
-    <div className="p-6 sm:p-10" data-aos="fade-up">
-      <h1 className="text-2xl sm:text-[2.3vw] leading-tight font-bold text-gray-900 mb-5 text-center">
+    <div className="p-6 sm:p-10" >
+      <h1 className="text-2xl sm:text-[2.3vw] leading-tight font-bold text-gray-900 mb-5 text-center" data-aos="zoom-in">
         Our Contributions & Social <br className="hidden sm:block" /> Responsibility
       </h1>
-      <p className="text-center text-gray-600 mb-10">
+      <p className="text-center text-gray-600 mb-10" data-aos="zoom-in">
         With constant innovation and understanding of specific market needs,
       </p>
-      <div className="flex flex-wrap justify-center gap-6 sm:grid sm:grid-cols-3 sm:gap-10" data-aos-duration="3000">
+      <div className="flex flex-wrap justify-center gap-6 sm:grid sm:grid-cols-3 sm:gap-10" data-aos="zoom-in">
         {cards.map((card, index) => (
           <InfoCard key={index} {...card} />
         ))}
