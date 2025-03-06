@@ -44,8 +44,8 @@ const TestimonialCarousel = () => {
   }, []);
 
   return (
-    <div className="w-full p-6 text-center">
-      <h2 className="text-3xl font-bold">What Our Customers Say About Us</h2>
+    <div className="w-full p-6 text-center mb-20">
+      <h2 className="text-5xl font-bold py-15">What Our Customers Say About Us</h2>
       <div className="flex justify-center items-center gap-4 mt-6">
         <button className="p-2 bg-orange-500 text-white rounded" onClick={() => swiperRef.current.swiper.slidePrev()}>
           ⬅
