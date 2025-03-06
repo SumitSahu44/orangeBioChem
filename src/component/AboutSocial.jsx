@@ -32,10 +32,10 @@ const AboutSocial = () => {
   ];
 
   return (
-    <div className="p-10">
+    <div className="p-10"   data-aos="fade-up">
       <h1 className="text-[2.3vw] leading-10 font-bold text-gray-900 mb-5 ml-35 capitalize">Our Contributions & Social <br /> Responsibility</h1>
       <p className='ml-35 mb-10'>With constant innovation and understanding of specific market needs,</p>
-      <div className="flex gap-25 justify-center">
+      <div className="flex gap-25 justify-center"  data-aos-duration="3000">
         {cards.map((card, index) => (
           <InfoCard key={index} {...card} />
         ))}
