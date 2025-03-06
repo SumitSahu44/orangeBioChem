@@ -19,8 +19,8 @@ const images = [
 const Works = () => {
   return (
     <div className="w-full p-4 text-center">
-      <h2 className="text-2xl font-bold">Explore Our Works</h2>
-      <p className="text-gray-500">With constant innovation and understanding of specific market needs,</p>
+      <h2 className="text-5xl mt-20 mb-5 font-bold">Explore Our Works</h2>
+      <p className="text-gray-500 mb-10">With constant innovation and understanding of specific market needs,</p>
       <div className="overflow-hidden mt-12">
         <Swiper
           modules={[Autoplay]}

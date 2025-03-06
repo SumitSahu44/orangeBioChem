@@ -4,10 +4,10 @@ const Services = () => {
   return (
     <div>
       <div class="container w-[90%] mx-auto my-15 px-4 py-8">
-   <h1 class="text-3xl font-bold mb-2">
+   <h1 class="text-5xl font-bold mb-4">
     We Offer a Wide Range of Services
    </h1>
-   <p class="text-lg mb-8">
+   <p class="text-lg mb-12">
     With constant innovation and understanding of specific market needs,
    </p>
    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
