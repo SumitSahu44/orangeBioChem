@@ -1,15 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import { Menu, X } from "lucide-react"; // Import icons for mobile menu
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // State for mobile menu
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="bg-white shadow-md">
-      <div className="container mx-auto flex items-center justify-between  px-6 py-4">
-        
+      <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <div>
           <Link to="/">
@@ -18,24 +17,22 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center space-x-15 text-lg font-medium"> 
+        <ul className="hidden md:flex items-center space-x-6 text-lg font-medium">
           <NavItem title="Home" link="/" isActive />
           <NavItem title="About" link="/about" />
-
+          
           {/* Products Dropdown */}
           <li
             className="relative cursor-pointer px-3"
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
-            Products
+            <Link to="/products">Products</Link>
             {dropdownOpen && (
               <ul className="absolute left-0 mt-2 w-44 bg-white shadow-md rounded-md">
                 {["Category 1", "Category 2", "Category 3"].map((category, index) => (
                   <li key={index} className="px-5 py-2 hover:bg-gray-100">
-                    <Link to={`/products/${category.toLowerCase().replace(/\s+/g, "-")}`}>
-                      {category}
-                    </Link>
+                    <Link to={`/products/${category.toLowerCase().replace(/\s+/g, "-")}`}>{category}</Link>
                   </li>
                 ))}
               </ul>
@@ -60,12 +57,12 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu (Sliding) */}
+      {/* Mobile Menu */}
       {menuOpen && (
         <ul className="md:hidden bg-white text-lg font-medium py-4 px-6 border-t space-y-4">
           <NavItem title="Home" link="/" isMobile />
           <NavItem title="About" link="/about" isMobile />
-          <NavItem title="Products" isDropdown />
+          <NavItem title="Products" link="/products" isDropdown isMobile />
           <NavItem title="Gallery" link="/gallery" isMobile />
           <NavItem title="Contact" link="/contact" isMobile />
           <NavItem title="Blogs" link="/blogs" isMobile />
@@ -84,18 +81,16 @@ const NavItem = ({ title, link, isActive, isMobile, isDropdown }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return isDropdown ? (
-    <li
-      className="relative cursor-pointer px-3 py-3"
-      onClick={() => setDropdownOpen(!dropdownOpen)}
-    >
-      Products
+    <li className="relative cursor-pointer px-3 py-3">
+      <div className="flex justify-between items-center" onClick={() => setDropdownOpen(!dropdownOpen)}>
+        <Link to={link}>{title}</Link>
+        <span>{dropdownOpen ? "▲" : "▼"}</span>
+      </div>
       {dropdownOpen && (
         <ul className="mt-2 w-full bg-white shadow-md rounded-md">
           {["Category 1", "Category 2", "Category 3"].map((category, index) => (
             <li key={index} className="px-5 py-2 hover:bg-gray-100">
-              <Link to={`/products/${category.toLowerCase().replace(/\s+/g, "-")}`}>
-                {category}
-              </Link>
+              <Link to={`/products/${category.toLowerCase().replace(/\s+/g, "-")}`}>{category}</Link>
             </li>
           ))}
         </ul>
