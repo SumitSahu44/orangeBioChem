@@ -2,40 +2,42 @@ import React from "react";
 import { useState } from "react";
 import { Star } from "lucide-react";
 import TestimonialCarousel from "../component/TestimonialCarousel";
+import Products from '../component/Products'
 import Footer from "../component/Footer";
-const Products = () => {
+const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
+  const images = [
+    "https://s3-alpha-sig.figma.com/img/fea0/8836/12d7885efacca0cd1c06d39f8927ef39?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=bYlFw5xkKdE5BPaQzfpC20--MDOvn0iePXe6sHEkpPRdWPUKtnc5dyz5OcMzpYO~XaBmYAjBtOFbGOBJF~VWgm02PAwvf0ti6DDtDMQCOU6a8gJDyXPZ349gqjp3p-eIjQNfEN9gvBHdBiSIarLYreLwEFZFvWawxjhz-Rqfo7s0jJww8D9PK1DNLACiL6B0nXmVSmVbmVPrmbPjzB3HvLZVKttcE8i2dz~t6ObMT3aiuBac9WpVpgXOav2ho5y8ZlCAdVeU5hm1icGVKKR6kGEBHffcV9aIMvU21b~ikOAORc60W79n-G7AFzfoFrrDIxqPQszXsKCdUIg73CC6Yw__",
+    "https://s3-alpha-sig.figma.com/img/f9a0/6a54/7b454cd47f0a2e4b5e494c0208d8ce49?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=np5WJGwXaCYCR5YIzWKuKuJHYDtJiPLf96uBoLoC3Hb5qQWdTkh0TpTbMFcJoKctehL6IsIUgMxq38q9nqmI~gSnHdXvaOkFAblC5tV4~gWXprdWTZ~fBIeuDXOp2wHXngh8QzJtonMPBYdK1l2o3~yt2lG~HgZgZHxY1Hum060Ugp7C5mpujdTwjsWElo~jt-6JBZg7W2dtF1fhLiVFDwQtSD6WJq7SjMNtvoSQWYSt2XNC4-L3~5v8l2o-fbhp59NBQ5s-c6KRo0tX3e7rdm0Uo8OkGVgC6hgwjRntNKhOaSSvLSRuZwYnTuSWrsewDRKRi~lK3qYrEAQeJa175A__"
+  ];
+
+  const [mainImage, setMainImage] = useState(images[0]);
   return (
     <div className="min-h-screen  ">
       <div className="container   pt-20 flex flex-col md:flex-row gap-15 justify-center ">
-        <div className="">
-          <div className="relative rounded-lg overflow-hidden flex justify-center items-center">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/fea0/8836/12d7885efacca0cd1c06d39f8927ef39?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=bYlFw5xkKdE5BPaQzfpC20--MDOvn0iePXe6sHEkpPRdWPUKtnc5dyz5OcMzpYO~XaBmYAjBtOFbGOBJF~VWgm02PAwvf0ti6DDtDMQCOU6a8gJDyXPZ349gqjp3p-eIjQNfEN9gvBHdBiSIarLYreLwEFZFvWawxjhz-Rqfo7s0jJww8D9PK1DNLACiL6B0nXmVSmVbmVPrmbPjzB3HvLZVKttcE8i2dz~t6ObMT3aiuBac9WpVpgXOav2ho5y8ZlCAdVeU5hm1icGVKKR6kGEBHffcV9aIMvU21b~ikOAORc60W79n-G7AFzfoFrrDIxqPQszXsKCdUIg73CC6Yw__"
-              alt="Product"
-              className="w-80 h-96 object-cover"
-            />
-          </div>
-          <div className="flex justify-center gap-4 mt-4">
-            <img
-              src="https://s3-alpha-sig.figma.com/img/f9a0/6a54/7b454cd47f0a2e4b5e494c0208d8ce49?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=np5WJGwXaCYCR5YIzWKuKuJHYDtJiPLf96uBoLoC3Hb5qQWdTkh0TpTbMFcJoKctehL6IsIUgMxq38q9nqmI~gSnHdXvaOkFAblC5tV4~gWXprdWTZ~fBIeuDXOp2wHXngh8QzJtonMPBYdK1l2o3~yt2lG~HgZgZHxY1Hum060Ugp7C5mpujdTwjsWElo~jt-6JBZg7W2dtF1fhLiVFDwQtSD6WJq7SjMNtvoSQWYSt2XNC4-L3~5v8l2o-fbhp59NBQ5s-c6KRo0tX3e7rdm0Uo8OkGVgC6hgwjRntNKhOaSSvLSRuZwYnTuSWrsewDRKRi~lK3qYrEAQeJa175A__"
-              alt="Product 1"
-              className="w-20 h-24 rounded-lg"
-            />
-            <img
-              src="https://s3-alpha-sig.figma.com/img/f9a0/6a54/7b454cd47f0a2e4b5e494c0208d8ce49?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=np5WJGwXaCYCR5YIzWKuKuJHYDtJiPLf96uBoLoC3Hb5qQWdTkh0TpTbMFcJoKctehL6IsIUgMxq38q9nqmI~gSnHdXvaOkFAblC5tV4~gWXprdWTZ~fBIeuDXOp2wHXngh8QzJtonMPBYdK1l2o3~yt2lG~HgZgZHxY1Hum060Ugp7C5mpujdTwjsWElo~jt-6JBZg7W2dtF1fhLiVFDwQtSD6WJq7SjMNtvoSQWYSt2XNC4-L3~5v8l2o-fbhp59NBQ5s-c6KRo0tX3e7rdm0Uo8OkGVgC6hgwjRntNKhOaSSvLSRuZwYnTuSWrsewDRKRi~lK3qYrEAQeJa175A__"
-              alt="Product 2"
-              className="w-20 h-24 rounded-lg"
-            />
-            <img
-              src="https://s3-alpha-sig.figma.com/img/f9a0/6a54/7b454cd47f0a2e4b5e494c0208d8ce49?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=np5WJGwXaCYCR5YIzWKuKuJHYDtJiPLf96uBoLoC3Hb5qQWdTkh0TpTbMFcJoKctehL6IsIUgMxq38q9nqmI~gSnHdXvaOkFAblC5tV4~gWXprdWTZ~fBIeuDXOp2wHXngh8QzJtonMPBYdK1l2o3~yt2lG~HgZgZHxY1Hum060Ugp7C5mpujdTwjsWElo~jt-6JBZg7W2dtF1fhLiVFDwQtSD6WJq7SjMNtvoSQWYSt2XNC4-L3~5v8l2o-fbhp59NBQ5s-c6KRo0tX3e7rdm0Uo8OkGVgC6hgwjRntNKhOaSSvLSRuZwYnTuSWrsewDRKRi~lK3qYrEAQeJa175A__"
-              alt="Product 3"
-              className="w-20 h-24 rounded-lg"
-            />
-          </div>
-        </div>
+      <div className="flex flex-col items-center">
+      {/* Main Image */}
+      <div className="relative rounded-lg overflow-hidden flex justify-center items-center">
+        <img src={mainImage} alt="Product" className="w-80 h-96 object-cover transition-all duration-300" />
+      </div>
 
-        <div className="md:w-1/2 pt-3">
+      {/* Thumbnail Images */}
+      <div className="flex justify-center gap-4 mt-4">
+        {images.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`Thumbnail ${index}`}
+            className={`w-20 h-24 rounded-lg cursor-pointer transition-transform duration-300 ${
+              mainImage === img ? "border-4 border-orange-500 scale-110" : ""
+            }`}
+            onClick={() => setMainImage(img)}
+          />
+        ))}
+      </div>
+    </div>
+
+        <div className="ml-8 md:w-1/2 pt-3">
           <h1 className="text-4xl font-bold">Product Name</h1>
           <p className="text-gray-600 mt-2">
             With constant innovation and understanding of specific market needs, we have evolved a wide range of products to meet our customers’ diverse needs globally.With constant innovation and understanding of specific market needs, we have evolved a wide range of products to meet our customers’ diverse needs globally.
@@ -72,13 +74,16 @@ const Products = () => {
             <span>Qty</span>
           </div>
 
-          <button className="mt-4 w-full md:w-auto bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded">
+          <button className="mt-4 w-[80%] mx-auto md:w-auto bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded">
             Add to Cart
           </button>
 
         </div>
       </div>
 
+
+      <Products />
+{/* 
       <div class="container mt-20 py-8">
         <h1 class="text-5xl mb-2 text-center font-bold capitalize">
           Our similar Products
@@ -148,11 +153,11 @@ const Products = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
       <TestimonialCarousel/>
       <Footer/>
     </div>
   );
 };
 
-export default Products;
+export default ProductDetails;

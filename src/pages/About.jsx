@@ -20,7 +20,7 @@ const About = () => {
       </div>
       <div className="w-full md:w-1/2" data-aos="fade-left">
         <img
-          className="w-full h-auto max-h-[500px] rounded-md"
+          className="w-full h-auto z-[50] max-h-[500px] rounded-md"
           src="https://s3-alpha-sig.figma.com/img/9c80/3fed/4307f463d4cf0846304909890f9ddc74?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=r6jF1jWgJpo6Frn0i2YE1SUaQjzQTPPsk0LG0WQgVYwXcwANwR2xigNbitW8NQNpzqToPpM-m9N3ZN4B6vzEjC9vPJI4I-ZdTC88wT35ALjFmwlpN2nUvEgBAq-vQLIQUmJjGbSl-71gaEFRQo8QBZ1UU6huOJIIWj0lqlU3olzMOfHe7WjaESQzKGlc1QvlC1~vyU4WaEALRkWKPsAKcfplR-7QErIWZFTZeawuVpdrtHiF-6~iKdiNZ0jMt9UXEHzD0vvW~OO9pT0rEjtpP~4G4Gt3FFVxn8hhfdb3a0t1cexS5YtZDjieNbrq~Zj4mxzv4OR0tRl6NYyx9Af5Kw__"
           alt="About"
         />

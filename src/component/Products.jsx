@@ -15,7 +15,7 @@ const products = [
 
 const Products = () => {
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto mt-15 py-8">
       <h1 className="text-5xl mb-2 text-center font-bold">Our Popular Products</h1>
       <p className="text-gray-600 text-center mb-20">
         With constant innovation and understanding of specific market needs,
