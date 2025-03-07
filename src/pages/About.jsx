@@ -53,18 +53,14 @@ const About = () => {
     <Services />
 
     {/* Future Vision Section */}
-    <div className="relative flex flex-col items-center text-center py-16 px-5 bg-slate-800 text-white" data-aos="zoom-in">
-      <h1 className="text-3xl md:text-4xl font-bold">Future Vision & Expansion</h1>
-      <ul className="text-lg md:text-xl mt-6 space-y-5">
+    <div className="relative flex flex-col items-center text-center py-20 px-5 bg-slate-800 text-white" >
+      <h1 className="text-3xl md:text-4xl font-bold" data-aos="fade-up">Future Vision & Expansion</h1>
+      <ul className="text-lg md:text-xl pt-15 list-disc px-20" data-aos="fade-up">
         <li>
-          We are planning to install an advanced Ayurvedic-based
-          manufacturing plant to address unsolved animal health issues
-          through natural remedies.
+        We are planning to install an  Advanced ayurvedic-based  manufacturing plant to address unsolved animal health issues  through natural remedies.The Ayurvedic formulations will be rare and exclusive, offering unique solutions not available  elsewhere.
         </li>
-        <li>
-          With a strong foundation in the pet industry, we are gearing up to
-          export our products worldwide to bring our expertise to a global
-          market.
+        <li className="mt-15">
+        With a strong foundation in the pet industry, we are gearing up  to export our products worldwide to bring our expertise to a  global market.
         </li>
       </ul>
     </div>
@@ -76,7 +72,7 @@ const About = () => {
         <ul className="list-disc text-lg space-y-4 font-semibold">
           <li>40+ premium veterinary products, including 10 exclusive formulations.</li>
           <li>Each product is designed to compete in the global market while maintaining affordability.</li>
-          <li>Our commitment to research and innovation ensures safe, effective, and high-quality solutions for animals.</li>
+          <li>Our commitment to research and innovation ensures safe,  effective, and high-quality solutions for animals.  At Orange Biochem, we are not just a company—we are a movement  dedicated to improving animal lives. With our unwavering passion  for Jivdaya and excellence, we continue to set new benchmarks in  veterinary care.</li>
         </ul>
       </div>
       <div className="w-full md:w-1/3 flex justify-center mt-8 md:mt-0" data-aos="zoom-in">
