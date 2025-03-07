@@ -52,7 +52,7 @@ const Gallery = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.5 }}
                 >
-                    WITH CREATIVE & UNIQUE STYLE
+                   look what we did
                 </motion.p>
 
                 <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">

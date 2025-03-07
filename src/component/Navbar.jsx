@@ -27,7 +27,7 @@ const Navbar = () => {
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
-            <Link to="/products">Products</Link>
+            <Link to="/ourproducts">Products</Link>
             {dropdownOpen && (
               <ul className="absolute left-0 mt-2 w-44 bg-white shadow-md rounded-md">
                 {["Category 1", "Category 2", "Category 3"].map((category, index) => (
@@ -62,7 +62,7 @@ const Navbar = () => {
         <ul className="md:hidden bg-white text-lg font-medium py-4 px-6 border-t space-y-4">
           <NavItem title="Home" link="/" isMobile />
           <NavItem title="About" link="/about" isMobile />
-          <NavItem title="Products" link="/products" isDropdown isMobile />
+          <NavItem title="Products" link="/ourproducts" isDropdown isMobile />
           <NavItem title="Gallery" link="/gallery" isMobile />
           <NavItem title="Contact" link="/contact" isMobile />
           <NavItem title="Blogs" link="/blogs" isMobile />
@@ -81,15 +81,15 @@ const NavItem = ({ title, link, isActive, isMobile, isDropdown }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return isDropdown ? (
-    <li className="relative cursor-pointer px-3 py-3">
-      <div className="flex justify-between items-center" onClick={() => setDropdownOpen(!dropdownOpen)}>
+    <li className="relative cursor-pointer z-[999]  px-3 py-3">
+      <div className="flex justify-between z-[999] items-center" onClick={() => setDropdownOpen(!dropdownOpen)}>
         <Link to={link}>{title}</Link>
         <span>{dropdownOpen ? "▲" : "▼"}</span>
       </div>
       {dropdownOpen && (
-        <ul className="mt-2 w-full bg-white shadow-md rounded-md">
+        <ul className="mt-2 w-full bg-white z-[999] shadow-md rounded-md">
           {["Category 1", "Category 2", "Category 3"].map((category, index) => (
-            <li key={index} className="px-5 py-2 hover:bg-gray-100">
+            <li key={index} className="px-5 py-2 z-[999] hover:bg-gray-100">
               <Link to={`/products/${category.toLowerCase().replace(/\s+/g, "-")}`}>{category}</Link>
             </li>
           ))}

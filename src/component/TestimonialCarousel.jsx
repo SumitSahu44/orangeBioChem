@@ -48,7 +48,7 @@ const TestimonialCarousel = () => {
       <h2 className="text-5xl font-bold py-15">What Our Customers Say About Us</h2>
       <div className="flex justify-center items-center gap-4 mt-6">
         <button className="p-2 bg-orange-500 text-white rounded" onClick={() => swiperRef.current.swiper.slidePrev()}>
-          ⬅
+         <p>{`<`}</p>
         </button>
         <Swiper
           ref={swiperRef}
@@ -78,7 +78,7 @@ const TestimonialCarousel = () => {
           ))}
         </Swiper>
         <button className="p-2 bg-orange-500 text-white rounded" onClick={() => swiperRef.current.swiper.slideNext()}>
-          ➡
+        <p>{`>`}</p>
         </button>
       </div>
 
