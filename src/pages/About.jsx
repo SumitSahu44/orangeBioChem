@@ -28,10 +28,10 @@ const About = () => {
     </div>
 
     {/* Commitment Section */}
-    <div className="flex flex-wrap items-center justify-center gap-10 pt-10 px-5 md:px-10">
-      <div className="w-full md:w-2/5" data-aos="fade-right">
+    <div className="flex flex-wrap items-center justify-center mt-15 gap-10 pt-10 px-5 md:px-10">
+      <div className="w-full md:w-1/2" data-aos="fade-right">
         <img
-          className="w-full h-auto max-h-[400px] rounded-md"
+          className="w-full h-auto max-h-[500px] rounded-md"
           src="https://s3-alpha-sig.figma.com/img/f45e/a664/08904726729fb50eade1bfa1aac2edc3?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=DtoBi4gGYFFWHkILrv5wAhn0XrYt5F6h1fM~BtG6Z~30IoHlypcs5eYMtOGvoWbaj6xCFUNx2E7BsjYWj~clDjuhtCZ8kVuJrGNw-XBcqM~YBPf2XHNO0SZ8Op9REblI~g2ObMw6sMkLiULpmqWONFXaPe17od-pL-Swt~u3kwIi07vK72XqOhAqKr7DUo8tMRbaDIjj3CXbJrPxm-3xxUIatTmtR~22USKpbpTHh0XNq4pzk8ZNMbHAKTfBxGgzWqYokqvlrBpxXcUgWigZSQOU~0~ssLR57y80IcSraRjCAHJlcVK38RRGQDU5Qrsc74EPz9KhDWW22V0Tj506DQ__"
           alt="Commitment"
         />
