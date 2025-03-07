@@ -10,7 +10,7 @@ const Hero = () => {
 
   return (
     <section className="bg-[#F4941E] border min-h-screen flex items-center text-white py-16 px-6">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10">
+      <div className="container mx-auto flex px-14 flex-col lg:flex-row items-center gap-10">
         
         {/* Left Content */}
         <div className="lg:w-1/2 text-center lg:text-left " data-aos="fade-right">
@@ -20,7 +20,7 @@ const Hero = () => {
           <p className="mt-4 text-base md:text-lg text-white/90">
             With constant innovation and understanding of specific market needs, we have evolved a wide range of products to meet our customers’ diverse needs globally.
           </p>
-          <button onClick={handleClick} className="mt-6 bg-white text-orange-500 font-semibold px-6 py-3 rounded-md shadow-md hover:bg-gray-100 transition">
+          <button onClick={handleClick} className="mt-6 bg-white text-orange-500 font-semibold px-15 py-3 rounded-md shadow-md hover:bg-gray-100 transition">
             About Us
           </button>
         </div>
