@@ -2,9 +2,6 @@
 import React from 'react'
 import ProductData from '../component/Products'
 import Footer from '../component/Footer'
-
-import React from 'react';
-import ProductData from '../component/Products';
 import { useParams } from "react-router-dom";
 
 
