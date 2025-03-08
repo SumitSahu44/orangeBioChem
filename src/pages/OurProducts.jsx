@@ -1,6 +1,12 @@
+
+import React from 'react'
+import ProductData from '../component/Products'
+import Footer from '../component/Footer'
+
 import React from 'react';
 import ProductData from '../component/Products';
 import { useParams } from "react-router-dom";
+
 
 const OurProducts = () => {
   const { category } = useParams(); // Get category from URL params
@@ -21,6 +27,10 @@ const OurProducts = () => {
 
   return (
     <div>
+
+       <ProductData />
+       <Footer/>
+
       <h2>Showing Products for: {category}</h2>
       <div className="product-list">
         {products.map((product) => (
@@ -30,6 +40,7 @@ const OurProducts = () => {
           </div>
         ))}
       </div>
+
     </div>
   );
 };

@@ -8,6 +8,7 @@ import OurProducts from "./pages/OurProducts";
 import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import BlogSection from "./pages/BlogSection";
 
 const App = () => {
   return (
@@ -20,8 +21,13 @@ const App = () => {
         <Route path="/ourProducts" element={<OurProducts />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="/gallery" element={<Gallery/>}/>        
+        <Route path="/blogs" element={<BlogSection/>}/>
+
         <Route path="/gallery" element={<Gallery/>}/>
         <Route path="/product/:category" element={<OurProducts />} />
+
       </Routes>
     </div>
   );
