@@ -30,14 +30,16 @@ const Navbar = () => {
             <Link to="/ourproducts">Products</Link>
             {dropdownOpen && (
               <ul className="absolute left-0 mt-2 w-44 bg-white shadow-md rounded-md">
-                {["Category 1", "Category 2", "Category 3"].map((category, index) => (
+                {["Dog", "Cat", "Cow"].map((category, index) => (
                   <li key={index} className="px-5 py-2 hover:bg-gray-100">
-                    <Link to={`/products/${category.toLowerCase().replace(/\s+/g, "-")}`}>{category}</Link>
+                    <Link to={`/product/${category.toLowerCase().replace(/\s+/g,)}`}>{category}</Link>
                   </li>
                 ))}
               </ul>
             )}
           </li>
+
+        
 
           <NavItem title="Gallery" link="/gallery" />
           <NavItem title="Contact" link="/contact" />
@@ -59,7 +61,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="md:hidden bg-white text-lg font-medium py-4 px-6 border-t space-y-4">
+        <ul className="md:hidden bg-white text-lg  font-medium py-4 px-6 border-t space-y-4">
           <NavItem title="Home" link="/" isMobile />
           <NavItem title="About" link="/about" isMobile />
           <NavItem title="Products" link="/ourproducts" isDropdown isMobile />
