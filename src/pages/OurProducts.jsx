@@ -26,9 +26,9 @@ const OurProducts = () => {
     <div>
 
        <ProductData />
-       <Footer/>
+      
 
-      <h2>Showing Products for: {category}</h2>
+      {/* <h2>Showing Products for: {category}</h2>
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product-card">
@@ -36,8 +36,11 @@ const OurProducts = () => {
             <h3>{product.name}</h3>
           </div>
         ))}
-      </div>
+      </div> */}
 
+
+
+      <Footer/>
     </div>
   );
 };
