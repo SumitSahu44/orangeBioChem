@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const products = [
   { id: 1, name: "amaze plus-i", image: "/images/product1.png" },
   { id: 2, name: "amaze plus-i", image: "/images/product2.png" },
@@ -40,16 +40,20 @@ const Products = () => {
       <p className="text-gray-600 text-center mb-20">
         With constant innovation and understanding of specific market needs,
       </p>
+
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
         {products.map((product) => (
-          <div key={product.id} className="text-center cursor-pointer mb-8 transform transition duration-300 hover:scale-110 uppercase ">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="mx-auto mb-2 w-24 h-50 object-contain drop-shadow-lg"
-            />
-            <p className="text-lg font-semibold">{product.name}</p>
-          </div>
+          <Link to="/ProductDetails" >
+              <div key={product.id} className="text-center cursor-pointer mb-8 transform transition duration-300 hover:scale-110 uppercase ">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="mx-auto mb-2 w-24 h-50 object-contain drop-shadow-lg"
+                />
+                <p className="text-lg font-semibold">{product.name}</p>
+              </div>
+          </Link>
+        
         ))}
       </div>
     </div>
