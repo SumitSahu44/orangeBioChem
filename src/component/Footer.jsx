@@ -5,10 +5,10 @@ const Footer = () => {
     <footer className="bg-[#1e2641] rounded-lg text-white py-15 px-6 md:px-50">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
         <div>
-          <h3 className="text-lg font-bold mb-4">INFO</h3>
+          <h3 className="text-lg font-bold mb-4">Quick Link</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:underline">Formats</a></li>
-            <li><a href="#" className="hover:underline">Compression</a></li>
+            <li><a href="#" className="hover:underline">Home</a></li>
+            <li><a href="#" className="hover:underline">Products</a></li>
             <li><a href="#" className="hover:underline">Pricing</a></li>
             <li><a href="#" className="hover:underline">FAQ</a></li>
             <li><a href="#" className="hover:underline">Status</a></li>
@@ -20,14 +20,14 @@ const Footer = () => {
           <ul className="space-y-2">
             <li><a href="#" className="hover:underline">Developer API</a></li>
             <li><a href="#" className="hover:underline">Tools</a></li>
-            <li><a href="#" className="hover:underline">Blog</a></li>
+            <li><a href="/blogs" className="hover:underline">Blog</a></li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-lg font-bold mb-4">COMPANY</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:underline">About Us</a></li>
+            <li><a href="/about" className="hover:underline">About Us</a></li>
             <li><a href="#" className="hover:underline">Sustainability</a></li>
             <li><a href="#" className="hover:underline">Terms of Service</a></li>
             <li><a href="#" className="hover:underline">Privacy</a></li>
