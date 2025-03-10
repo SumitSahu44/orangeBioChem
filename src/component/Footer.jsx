@@ -7,8 +7,8 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold mb-4">Quick Link</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:underline">Home</a></li>
-            <li><a href="#" className="hover:underline">Products</a></li>
+            <li><a href="/" className="hover:underline">Home</a></li>
+            <li><a href="/products" className="hover:underline">Products</a></li>
             <li><a href="#" className="hover:underline">Pricing</a></li>
             <li><a href="#" className="hover:underline">FAQ</a></li>
             <li><a href="#" className="hover:underline">Status</a></li>
