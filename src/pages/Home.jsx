@@ -10,7 +10,7 @@ const Home = () => {
     <div>
       
       <Hero />
-      <Services/>
+      <Services title={'We Offer a Wide Range of Services'}/>
       <Products/>
       <Work/>
       <TestimonialCarousel/>

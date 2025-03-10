@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Services = () => {
+const Services = (props) => {
   return (
     <div>
       <div class="container w-[90%] mx-auto my-20 px-4 py-8  overflow-x-hidden" >
    <h1 class="text-5xl font-bold mb-4" data-aos="fade-up">
-    We Offer a Wide Range of Services
+    {props.title}
    </h1>
    <p class="text-lg mb-12"  data-aos="fade-up">
     With constant innovation and understanding of specific market needs,
