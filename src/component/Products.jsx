@@ -42,7 +42,7 @@ const Products = () => {
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
         {products.map((product) => (
-          <div key={product.id} className="text-center mb-8 transform transition duration-300 hover:scale-110 uppercase ">
+          <div key={product.id} className="text-center cursor-pointer mb-8 transform transition duration-300 hover:scale-110 uppercase ">
             <img
               src={product.image}
               alt={product.name}
