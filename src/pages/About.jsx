@@ -50,7 +50,7 @@ const About = () => {
       </div>
     </div>
 
-    <Services />
+    <Services title={"We Offer a Wide Range of Services"} />
 
     {/* Future Vision Section */}
     <div className="relative flex flex-col items-center text-center py-20 px-5 bg-slate-800 text-white" >
