@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Hero from '../component/Hero'
 import Services from '../component/Services'
 import Products from '../component/Products'
