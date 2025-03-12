@@ -1,5 +1,4 @@
 
-import React from 'react'
 import ProductData from '../component/Products'
 import Footer from '../component/Footer'
 import { useParams } from "react-router-dom";
