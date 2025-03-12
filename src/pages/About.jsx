@@ -1,4 +1,3 @@
-import React from "react";
 
 import Footer from "../component/Footer";
 import Services from "../component/Services";
