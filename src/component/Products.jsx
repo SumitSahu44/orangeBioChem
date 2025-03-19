@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 const products = [
   { id: 1, name: "amaze plus-i", image: "/images/product1.png" },
