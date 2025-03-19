@@ -16,6 +16,8 @@ const App = () => {
 {/*       common navbar for all pages  */}
       <Navbar />
 
+
+{/*       all routes  */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
