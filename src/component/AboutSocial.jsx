@@ -1,4 +1,3 @@
-
 const InfoCard = ({ title, description, bgColor }) => {
   return (
     <div className={`p-6 rounded-2xl shadow-lg ${bgColor} w-full sm:w-80 h-auto flex flex-col items-start`}>
