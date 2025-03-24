@@ -13,7 +13,7 @@ const InfoCard = ({ title, description, bgColor }) => {
     </div>
   );
 };
-about social components 
+{/* about social components */}
 const AboutSocial = () => {
   const cards = [
     {
