@@ -32,6 +32,7 @@ const products = [
 
 ];
 
+
 const Products = () => {
   return (
     <div className="container mx-auto mt-15 py-8">
