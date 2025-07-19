@@ -16,6 +16,7 @@ const Navbar = () => {
           </Link>
         </div>
 
+        
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-6 text-lg font-medium">
           <NavItem title="Home" link="/" isActive />
