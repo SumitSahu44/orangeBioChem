@@ -9,6 +9,7 @@ const Hero = () => {
   return (
     <section className="bg-[#F4941E] border min-h-screen flex items-center text-white py-16 px-6">
       <div className="container mx-auto flex px-14 flex-col lg:flex-row items-center gap-10">
+
         
         {/* Left Content */}
         <div className="lg:w-1/2 text-center lg:text-left " data-aos="fade-right">
