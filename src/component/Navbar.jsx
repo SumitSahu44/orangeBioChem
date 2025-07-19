@@ -5,7 +5,6 @@ import { Menu, X } from "lucide-react";
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <nav className="bg-white shadow-md">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
@@ -15,7 +14,6 @@ const Navbar = () => {
             <img src="/images/orangebio.png" alt="Orange Biochem" className="h-12 w-auto" />
           </Link>
         </div>
-
         
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-6 text-lg font-medium">
