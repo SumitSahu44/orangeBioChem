@@ -13,7 +13,6 @@ import BlogSection from "./pages/BlogSection";
 const App = () => {
   return (
     <div>
-
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
