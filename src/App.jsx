@@ -13,7 +13,7 @@ import BlogSection from "./pages/BlogSection";
 const App = () => {
   return (
     <div>
-{/*       common navbar for all pages  */}
+
       <Navbar />
 
 
