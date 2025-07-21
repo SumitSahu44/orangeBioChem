@@ -12,7 +12,6 @@ const Footer = () => {
             <li><a href="/contact" className="hover:underline">Contact</a></li>
           </ul>
         </div>
-
         <div>
           <h3 className="text-lg font-bold mb-4">RESOURCES</h3>
           <ul className="space-y-2">
