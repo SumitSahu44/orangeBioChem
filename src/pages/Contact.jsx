@@ -1,6 +1,5 @@
 
 import Footer from '../component/Footer'
-
 const Contact = () => {
   return (
     <div className='min-h-screen'>
