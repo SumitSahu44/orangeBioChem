@@ -1,7 +1,6 @@
 
 import { motion } from "framer-motion";
 import Footer from "../component/Footer";
-
 const images = [
     "https://i.pinimg.com/736x/a5/3c/c8/a53cc86f265afc600ef78b21a4c33a1f.jpg",
     "https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?q=80&w=1976&auto=format&fit=crop",
