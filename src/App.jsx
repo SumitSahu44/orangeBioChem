@@ -8,7 +8,6 @@ import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import BlogSection from "./pages/BlogSection";
-
 const App = () => {
   return (
     <div>
